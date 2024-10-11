@@ -157,7 +157,7 @@ function toast({ ...props }: Toast) {
       ...props,
       id,
       open: true,
-      onOpenChange: (open: any) => {
+      onOpenChange: (open: boolean) => {  // Specify boolean instead of any
         if (!open) dismiss()
       },
     },
@@ -169,6 +169,7 @@ function toast({ ...props }: Toast) {
     update,
   }
 }
+
 
 function useToast() {
   const [state, setState] = React.useState<State>(memoryState)

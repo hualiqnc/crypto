@@ -203,7 +203,7 @@ export default function Component() {
     setEmail('')
   }
 
-  const [isTransmissionHovered, setIsTransmissionHovered] = useState(false)
+  const [, setIsTransmissionHovered] = useState(false)
 
   const handleRegisterNowClick = () => {
     receiveTransmissionsRef.current?.scrollIntoView({ behavior: 'smooth' })

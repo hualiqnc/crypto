@@ -1,17 +1,16 @@
 'use client'
-import { Send, MessageCircle, ChevronLeft, ChevronRight, Download, X  } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { CheckCircle, Clock, Search, Facebook, Twitter, Instagram, Twitch, Youtube } from "lucide-react"
-import Image from 'next/image'
+import { Card, CardContent } from "@/components/ui/card"
+
+import { CheckCircle, Clock } from "lucide-react"
+
 
 export default function TransactionPage() {
   return (
     <div className="min-h-screen bg-[#1C2128] text-white flex flex-col font-exo2">
-    
+
       <main className="flex-grow p-4">
         <div className="max-w-7xl mx-auto space-y-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
@@ -26,7 +25,7 @@ export default function TransactionPage() {
           </div>
 
           <div className="relative w-full max-w-lg mx-auto">
-           
+
           </div>
 
           <div className="flex flex-wrap justify-between items-center gap-2">
@@ -82,11 +81,11 @@ export default function TransactionPage() {
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-gray-300">
                   <span className="text-gray-600">Value:</span>
-                  <span>0.05 &lt;coins' name&gt; ($110.78 USD)</span>
+                  <span>0.05 &lt;coin&apos;s name&gt; ($110.78 USD)</span>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-gray-300">
                   <span className="text-gray-600">Transaction fee:</span>
-                  <span>0.000001 &lt;coins' name&gt; ($0.67 USD)</span>
+                  <span>0.000001 &lt;coin&apos;s name&gt; ($0.67 USD)</span>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-gray-300">
                   <span className="text-gray-600">Gas fee:</span>
@@ -96,7 +95,7 @@ export default function TransactionPage() {
                   <span className="text-gray-600">Private note:</span>
                   <span className="italic text-gray-500">To access the Private Note feature, you must be Logged in.</span>
                 </div>
-                
+
               </div>
             </CardContent>
           </Card>

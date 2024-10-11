@@ -12,7 +12,7 @@ import { toast } from "@/components/ui/use-toast"
 
 
 
-const handleDownload = () => {
+/*const handleDownload = () => {
   // Implement download functionality
   console.log('Downloading page data...')
 }
@@ -27,7 +27,7 @@ const ArrowIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM12 8.6L9.4 11.2L8 9.8L9.8 8H4V6H9.8L8 4.2L9.4 2.8L12 5.4C12.4 5.8 12.4 6.2 12 6.6V8.6Z" fill="#A0AEC0" />
   </svg>
-)
+)*/
 
 const transactions = [
   { hash: '0x02bJ97ca75...', method: 'Transfer', block: '050505', age: '5 secs ago', from: '0x0496A61A1...J97500BC', to: '0x308C3F1...B0505CaF5b2d', amount: '5,000,000 JCO', fee: '0.050505' },
@@ -93,10 +93,10 @@ export default function TransactionExplorer() {
   }
 
 
-  const handlePageChange = (page: number) => {
+  /*const handlePageChange = (page: number) => {
     setCurrentPage(page)
     // Fetch new data for the selected page
-  }
+  }*/
 
 
   const formatAmount = (amount: string) => {

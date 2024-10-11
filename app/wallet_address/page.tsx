@@ -654,11 +654,11 @@ export default function TransactionExplorer() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-gray-600 font-bold">Balance:</p>
-                  <p>2840 &lt;coin's name&gt;</p>
+                  <p>2840 &lt;coin&apos;s name&gt;</p>
                 </div>
                 <div>
                   <p className="text-gray-600 font-bold">Total Sent:</p>
-                  <p>2840 &lt;coin's name&gt;</p>
+                  <p>2840 &lt;coin&apos;s name&gt;</p>
                 </div>
                 <div>
                   <p className="text-gray-600 font-bold">Value:</p>

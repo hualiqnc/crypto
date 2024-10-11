@@ -494,9 +494,9 @@ export default function TransactionExplorer() {
     [setEdges]
   );
 
-  const toggleRightPanel = () => {
+  /*const toggleRightPanel = () => {
     setIsRightPanelOpen(!isRightPanelOpen);
-  };
+  };*/
 
   const handleExport = () => {
     console.log("Exporting transactions...");

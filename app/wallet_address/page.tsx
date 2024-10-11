@@ -578,7 +578,7 @@ export default function TransactionExplorer() {
     }
   };
 
-  const onEdgeClick = useCallback((event: MouseEvent, edge: any) => {
+  const onEdgeClick = useCallback((edge: any) => {
     console.log("Edge clicked:", edge);
     setSelectedEdge(edge);
     setIsOpen(true);

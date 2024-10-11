@@ -201,6 +201,7 @@ const nodeTypes = {
 const edgeTypes = {
   custom: CustomEdge,
 };
+const [selectedEdge, setSelectedEdge] = useState<Transaction | null>(null);
 
 interface Transaction {
   time: string;
@@ -578,12 +579,22 @@ export default function TransactionExplorer() {
     }
   };
 
-  const onEdgeClick = useCallback((edge: string) => {
-    console.log("Edge clicked:", edge);
-    setSelectedEdge(edge);
-    setIsOpen(true);
+  const onEdgeClick = useCallback((edge: unknown) => {
+    // Validate if the edge is an object and has the structure of a Transaction
+    if (
+      typeof edge === 'object' &&
+      edge !== null &&
+      'time' in edge &&
+      'sender' in edge &&
+      'recipient' in edge &&
+      'amount' in edge &&
+      'txid' in edge
+    ) {
+      // Type assertion to ensure TypeScript knows this is a Transaction
+      setSelectedEdge(edge as Transaction);
+      setIsOpen(true);
+    }
   }, []);
-
 
   return (
     <>

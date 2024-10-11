@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Quantico, Poppins } from '@next/font/google';
+import { Quantico } from '@next/font/google';
 import { Exo_2 } from '@next/font/google';
 import Navbar from './navbar';
 import Footer from './footer';
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
-});
 
 const exo2 = Exo_2({
   subsets: ['latin'],
@@ -41,7 +35,7 @@ export default function RootLayout({
         <link rel="icon" href="/notextlogo.ico" />
       </head>
       <body
-        className={`${quantico.variable} ${exo2.variable} ${poppins.variable} antialiased`}
+        className={`${quantico.variable} ${exo2.variable} antialiased`}
       >
         <Navbar /> {/* Thêm Navbar */}
         <main>{children}</main> {/* Nội dung chính */}

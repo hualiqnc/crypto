@@ -1,13 +1,13 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+//import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import { Shield, BarChart2, FileText, Layout, ArrowRight, ChevronDown } from "lucide-react"
 import { motion, useAnimation, AnimatePresence, useMotionValue, useTransform, useScroll } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { ArrowRightIcon } from 'lucide-react'
+//import { useInView } from 'react-intersection-observer'
+//import { ArrowRightIcon } from 'lucide-react'
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -179,10 +179,10 @@ const faqData: FAQItem[] = [
 
 export default function Component() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
-  const [isHovered, setIsHovered] = useState(false)
+  //const [isHovered, setIsHovered] = useState(false)
   const [email, setEmail] = useState('')
   const { scrollY } = useScroll()
-  const controls = useAnimation()
+  //const controls = useAnimation()
 
 
   const trustedCompaniesRef = useRef<HTMLElement>(null)
@@ -293,7 +293,7 @@ export default function Component() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               <InfoCard icon={<CreateIcon />} title="Discover" description="Discover detailed insights into wallet addresses, track transaction histories, and follow the movement of assets across the blockchain." cta="Get Started" />
-              <InfoCard icon={<LoginIcon />} title="Track" description="Monitor real-time blockchain transactions, track the flow of assets, and verify the status of any transaction." cta={<Link href="/transaction">Find a Transaction</Link>}/>
+              <InfoCard icon={<LoginIcon />} title="Track" description="Monitor real-time blockchain transactions, track the flow of assets, and verify the status of any transaction." cta={<Link href="/transaction">Find a Transaction</Link>} />
               <InfoCard icon={<ManageIcon />} title="Wallet" description="Keep track of wallet activities, view detailed transaction histories, and gain an overview of any wallet's activity." cta={<Link href="/wallet_address">Wallet Check</Link>} />
             </div>
           </div>
@@ -368,7 +368,7 @@ export default function Component() {
                   24/7 access to full service customer support
                 </h1>
                 <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl">
-                  Experience round-the-clock assistance from our dedicated team. We're here to ensure your success and provide the support you need, whenever you need it.
+                  Experience round-the-clock assistance from our dedicated team. We&apos;re here to ensure your success and provide the support you need, whenever you need it.
                 </p>
                 <motion.div
                   whileHover={{ scale: 1.05 }}

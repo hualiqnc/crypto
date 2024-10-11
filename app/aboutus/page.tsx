@@ -12,10 +12,10 @@ const AboutUs: React.FC = () => {
   ]
   const testimonials = [
     { name: 'Trinh Tran Phuong Tuan, Vietnam', image: '/tuan.jpg', text: '"Jbiz has made it easy for me to access and manage my crypto assets efficiently. The user-friendly interface and advanced trading tools have truly provided a great experience."' },
-    { name: 'Jack, USA', image: '/jack.jpg', text: '"I\'m really impressed by Jbiz\'s level of security and transparency. Staking and participating in DeFi on this platform is incredibly easy and offers attractive returns."' },
+    { name: 'Jack, USA', image: '/jack.jpg', text: '"I&apos;m really impressed by Jbiz&apos;s level of security and transparency. Staking and participating in DeFi on this platform is incredibly easy and offers attractive returns."' },
     { name: 'J97, Italy', image: '/j97.jpg', text: '"The support team at Jbiz is truly outstanding. Anytime I encounter an issue, they resolve it quickly and professionally. Jbiz is not just an exchange but a friendly community."' },
   ]
-  
+
   return (
     <div className="bg-[#1C2128] text-[#FFFFFF] min-h-screen p-4 sm:p-6 md:p-8 font-exo2">
       <div className="max-w-6xl mx-auto">
@@ -28,14 +28,14 @@ const AboutUs: React.FC = () => {
 
         {/* Mission and Aims */}
         <section className="mb-8 lg:mb-12 flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-8">
-          <div className="w-full lg:w-1/2 bg-[#161A20] rounded-full p-4 sm:p-6 lg:p-8 flex items-center justify-center aspect-square" style={{height: '300px', borderRadius: '50%' }}>
+          <div className="w-full lg:w-1/2 bg-[#161A20] rounded-full p-4 sm:p-6 lg:p-8 flex items-center justify-center aspect-square" style={{ height: '300px', borderRadius: '50%' }}>
             <div className="max-w-xs">
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-justify text-white">
                 <span className="text-[#F5B056] font-bold">Jbiz</span> aims to become a pioneering platform in the decentralized finance space, driving the widespread adoption and application of blockchain technology to billions of people worldwide, creating a transparent, fair, and borderless financial ecosystem.
               </p>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 bg-[#F5B056] rounded-full p-4 sm:p-6 lg:p-8 flex items-center justify-center aspect-square" style={{height: '300px', borderRadius: '50%' }}>
+          <div className="w-full lg:w-1/2 bg-[#F5B056] rounded-full p-4 sm:p-6 lg:p-8 flex items-center justify-center aspect-square" style={{ height: '300px', borderRadius: '50%' }}>
             <div className="max-w-xs">
               <p className="text-sm sm:text-base lg:text-lg font-semibold text-justify text-[#161A20]">
                 The mission of <span className="font-bold">Jbiz</span> is to provide users with the most advanced tools and services to trade, invest, and manage crypto assets safely and efficiently. We are committed to building a trusted platform that makes it easy for everyone to access and thrive in the world of cryptocurrency.

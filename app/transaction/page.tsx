@@ -4,10 +4,10 @@ import { useState, useEffect, useCallback } from 'react'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+//import { Input } from "@/components/ui/input"
 import Link from 'next/link'
-import Image from 'next/image'
-import { Eye, ArrowUpDown, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Download, Copy, Facebook, Twitter, Instagram, Send, MessageCircle, Youtube} from 'lucide-react'
+//import Image from 'next/image'
+import { Eye, ChevronLeft, ChevronRight, Download, Copy } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast"
 
 
@@ -19,13 +19,13 @@ const handleDownload = () => {
 
 const CopyIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 0H2C0.9 0 0 0.9 0 2V12H2V2H12V0ZM14 4H5C3.9 4 3 4.9 3 6V16H14C15.1 16 16 15.1 16 14V6C16 4.9 15.1 4 14 4ZM14 14H5V6H14V14Z" fill="#A0AEC0"/>
+    <path d="M12 0H2C0.9 0 0 0.9 0 2V12H2V2H12V0ZM14 4H5C3.9 4 3 4.9 3 6V16H14C15.1 16 16 15.1 16 14V6C16 4.9 15.1 4 14 4ZM14 14H5V6H14V14Z" fill="#A0AEC0" />
   </svg>
 )
 
 const ArrowIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM12 8.6L9.4 11.2L8 9.8L9.8 8H4V6H9.8L8 4.2L9.4 2.8L12 5.4C12.4 5.8 12.4 6.2 12 6.6V8.6Z" fill="#A0AEC0"/>
+    <path d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM12 8.6L9.4 11.2L8 9.8L9.8 8H4V6H9.8L8 4.2L9.4 2.8L12 5.4C12.4 5.8 12.4 6.2 12 6.6V8.6Z" fill="#A0AEC0" />
   </svg>
 )
 
@@ -52,7 +52,7 @@ const transactions = [
   { hash: '0xeb2eba1ac2...', method: 'Transfer', block: '050505', age: '5 secs ago', from: '0xA7B72cJ97...8E54d0d', to: '0xdA1958D...C13D831ec71102', amount: '150 JCO', fee: '0.0001102' },
   { hash: '0x8J9750Of32c...', method: 'Transfer', block: '050505', age: '5 secs ago', from: '0xA7R12cJ97...R1kR7d0d', to: '0xdA1958D...C13D831ec71102', amount: '5,000 JCO', fee: '0.5000000' },
   { hash: '0x02bJ97ca75...', method: 'Transfer', block: '050505', age: '5 secs ago', from: '0x0496A61A1...J97500BC', to: '0x308C3F1...B0505CaF5b2d', amount: '5,000,000 JCO', fee: '0.050505' },
-  
+
 ]
 
 export default function TransactionExplorer() {
@@ -91,13 +91,13 @@ export default function TransactionExplorer() {
       })
     })
   }
-  
+
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page)
     // Fetch new data for the selected page
   }
-  
+
 
   const formatAmount = (amount: string) => {
     const [value, currency] = amount.split(' ')
@@ -117,14 +117,14 @@ export default function TransactionExplorer() {
     const headers = ['Transaction Hash', 'Method', 'Block', 'Age', 'From', 'To', 'Amount', 'Txn Fee']
     const csvContent = [
       headers.join(','),
-      ...transactions.map(tx => 
+      ...transactions.map(tx =>
         [
-          tx.hash, 
-          tx.method, 
-          tx.block, 
-          tx.age, 
-          tx.from, 
-          tx.to, 
+          tx.hash,
+          tx.method,
+          tx.block,
+          tx.age,
+          tx.from,
+          tx.to,
           formatAmount(tx.amount).replace(/,/g, ''), // Remove commas for CSV 
           // Format the fee to always show 10 decimal places
           formatFee(tx.fee)
@@ -168,7 +168,7 @@ export default function TransactionExplorer() {
   }, [scrollToTop])
 
 
-  
+
   return (
     //Boxes that displays the overall information about the crypto marketplace
     <div className="min-h-screen bg-[#1C2128] text-white font-exo2">
@@ -202,7 +202,7 @@ export default function TransactionExplorer() {
               <p className="text-gray-500 text-sm text-center">(Average)</p>
             </CardContent>
           </Card>
-          <Card  className="bg-white border rounded-2xl font-quantico">
+          <Card className="bg-white border rounded-2xl font-quantico">
             <CardHeader>
               <CardTitle className="text-lg text-center text-gray-600">Network transaction fee (24h)</CardTitle>
             </CardHeader>
@@ -279,54 +279,53 @@ export default function TransactionExplorer() {
             </Button>
           </div>
         </div>
-        
+
         <div className="overflow-x-auto">
-            <Table className="w-full border rounded-2xl relative overflow-hidden hover:bg-[#F5B069] transition-colors duration-200">
-              <TableHeader className="text-base">
-                <TableRow className="bg-white">
-                  <TableHead className="w-[50px]"></TableHead>
-                  <TableHead className="text-black">Transaction Hash</TableHead>
-                  <TableHead className="text-black">Method</TableHead>
-                  <TableHead className="text-black">Block</TableHead>
-                  <TableHead className="text-black">Age</TableHead>
-                  <TableHead className="text-black">From</TableHead>
-                  <TableHead className="text-black">To</TableHead>
-                  <TableHead className="text-black">Amount</TableHead>
-                  <TableHead className="text-black">Txn Fee</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody className="text-sm md:text-base">
-                {transactions.map((tx, index) => (
-                  <TableRow key={index} className="bg-white text-black">
+          <Table className="w-full border rounded-2xl relative overflow-hidden hover:bg-[#F5B069] transition-colors duration-200">
+            <TableHeader className="text-base">
+              <TableRow className="bg-white">
+                <TableHead className="w-[50px]"></TableHead>
+                <TableHead className="text-black">Transaction Hash</TableHead>
+                <TableHead className="text-black">Method</TableHead>
+                <TableHead className="text-black">Block</TableHead>
+                <TableHead className="text-black">Age</TableHead>
+                <TableHead className="text-black">From</TableHead>
+                <TableHead className="text-black">To</TableHead>
+                <TableHead className="text-black">Amount</TableHead>
+                <TableHead className="text-black">Txn Fee</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className="text-sm md:text-base">
+              {transactions.map((tx, index) => (
+                <TableRow key={index} className="bg-white text-black">
                   <TableCell className="p-0">
                     <div className="flex items-center justify-center h-full">
                       <Eye size={16} className="text-gray-400" />
                     </div>
                   </TableCell>
                   <TableCell className="font-medium text-blue-600">
-                  <div className="flex items-center space-x-2">
-                    <Link href={'/transaction_detail'}>
-                      <span className="cursor-pointer hover:underline">{tx.hash}</span>
-                    </Link>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => copyToClipboard(tx.hash)}
-                      className="h-5 w-5 p-0"
-                    >
-                      <Copy size={12} />
-                    </Button>
-                  </div>
-                </TableCell>
-                  
+                    <div className="flex items-center space-x-2">
+                      <Link href={'/transaction_detail'}>
+                        <span className="cursor-pointer hover:underline">{tx.hash}</span>
+                      </Link>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => copyToClipboard(tx.hash)}
+                        className="h-5 w-5 p-0"
+                      >
+                        <Copy size={12} />
+                      </Button>
+                    </div>
+                  </TableCell>
+
                   <TableCell>
                     <button
                       onClick={() => handleMethodClick(tx.method)}
-                      className={`px-3 py-1 rounded-full text-base font-medium w-24 h-8 flex items-center justify-center ${
-                        selectedMethod === tx.method
-                          ? 'bg-purple-100 text-[#F5B069] border-2 border-[#F5B069]'
-                          : 'bg-gray-100 text-gray-800 border border-gray-300'
-                      }`}
+                      className={`px-3 py-1 rounded-full text-base font-medium w-24 h-8 flex items-center justify-center ${selectedMethod === tx.method
+                        ? 'bg-purple-100 text-[#F5B069] border-2 border-[#F5B069]'
+                        : 'bg-gray-100 text-gray-800 border border-gray-300'
+                        }`}
                     >
                       {tx.method}
                     </button>
@@ -334,36 +333,36 @@ export default function TransactionExplorer() {
                   <TableCell>{tx.block}</TableCell>
                   <TableCell>{tx.age}</TableCell>
                   <TableCell className="text-blue-600">
-                  <div className="flex items-center space-x-2">
-                    <Link href={'/wallet_address'}>
-                      <span className="cursor-pointer hover:underline">{tx.from}</span>
-                    </Link>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => copyToClipboard(tx.from)}
-                      className="h-5 w-5 p-0"
-                    >
-                      <Copy size={12} />
-                    </Button>
-                  </div>
-                </TableCell>
-                
-                <TableCell className="text-blue-600">
-                  <div className="flex items-center space-x-2">
-                    <Link href={'/wallet_address'}>
-                      <span className="cursor-pointer hover:underline">{tx.to}</span>
-                    </Link>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => copyToClipboard(tx.to)}
-                      className="h-5 w-5 p-0"
-                    >
-                      <Copy size={12} />
-                    </Button>
-                  </div>
-                </TableCell>
+                    <div className="flex items-center space-x-2">
+                      <Link href={'/wallet_address'}>
+                        <span className="cursor-pointer hover:underline">{tx.from}</span>
+                      </Link>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => copyToClipboard(tx.from)}
+                        className="h-5 w-5 p-0"
+                      >
+                        <Copy size={12} />
+                      </Button>
+                    </div>
+                  </TableCell>
+
+                  <TableCell className="text-blue-600">
+                    <div className="flex items-center space-x-2">
+                      <Link href={'/wallet_address'}>
+                        <span className="cursor-pointer hover:underline">{tx.to}</span>
+                      </Link>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => copyToClipboard(tx.to)}
+                        className="h-5 w-5 p-0"
+                      >
+                        <Copy size={12} />
+                      </Button>
+                    </div>
+                  </TableCell>
                   <TableCell>{formatAmount(tx.amount)}</TableCell>
                   <TableCell>{formatFee(tx.fee)}</TableCell>
                 </TableRow>
@@ -421,9 +420,9 @@ export default function TransactionExplorer() {
           A transaction is a cryptographically signed instruction that changes the blockchain state. Block explorers track the details of all transactions in the network. Learn more about transactions in our Knowledge Base.
         </p>
 
-        <Button 
+        <Button
           id="back-to-top"
-          variant="link" 
+          variant="link"
           className="mt-4 text-blue-500 hover:text-[#F5B069]"
         >
           Back to Top
@@ -431,6 +430,6 @@ export default function TransactionExplorer() {
       </div>
     </div>
 
-    
+
   )
 }

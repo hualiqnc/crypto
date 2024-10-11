@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 //import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import { Shield, BarChart2, FileText, Layout, ArrowRight, ChevronDown } from "lucide-react"
-import { motion, useAnimation, AnimatePresence, useMotionValue, useTransform, useScroll } from 'framer-motion'
+import { motion, AnimatePresence, useMotionValue, useTransform, useScroll } from 'framer-motion'
 //import { useInView } from 'react-intersection-observer'
 //import { ArrowRightIcon } from 'lucide-react'
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"

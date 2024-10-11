@@ -201,7 +201,6 @@ const nodeTypes = {
 const edgeTypes = {
   custom: CustomEdge,
 };
-const [selectedEdge, setSelectedEdge] = useState<Transaction | null>(null);
 
 interface Transaction {
   time: string;

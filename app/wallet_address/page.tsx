@@ -290,7 +290,7 @@ const transactions = [
 export default function TransactionExplorer() {
   const [, setSelectedElement] = useState<string | null>(null);
   const [selectedMethod, setSelectedMethod] = useState<string | null>(null)
-  const [isRightPanelOpen, setIsRightPanelOpen] = useState(true);
+  //const [isRightPanelOpen, setIsRightPanelOpen] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false)
@@ -496,11 +496,11 @@ export default function TransactionExplorer() {
 
   /*const toggleRightPanel = () => {
     setIsRightPanelOpen(!isRightPanelOpen);
-  };*/
+  };
 
   const handleExport = () => {
     console.log("Exporting transactions...");
-  };
+  };*/
 
   const handleViewChange = (view: "transaction" | "graph") => {
     setActiveView(view);
